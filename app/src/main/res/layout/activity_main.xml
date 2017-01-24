@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ru.SnowVolf.gikgoogle.MainActivity">
+
+   <EditText android:id="@+id/zapros"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Введите поисковый запрос"
+       android:maxLines="5"
+       style="@android:style/Widget.DeviceDefault.Light.EditText" />
+
+    <Button
+        android:text="Перейти"
+        android:textAllCaps="true"
+        android:onClick="Go2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zapros"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/share_intent"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless" />
+
+    <Button
+        android:text="Копировать"
+        android:textAllCaps="true"
+        android:onClick="Copy2Clipboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/share_intent"
+        android:layout_toLeftOf="@+id/share_intent"
+        android:layout_toStartOf="@+id/share_intent"
+        android:id="@+id/copy"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless" />
+
+    <Button
+        android:text="Очистить"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zapros"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/clear"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:onClick="clearText" />
+</RelativeLayout>
