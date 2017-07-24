@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -13,43 +12,68 @@
    <EditText android:id="@+id/zapros"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:hint="Введите поисковый запрос"
-       android:maxLines="5"
-       style="@android:style/Widget.DeviceDefault.Light.EditText" />
+       android:hint="@string/enter_queue"
+       android:maxLines="6"
+       style="@android:style/Widget.DeviceDefault.Light.EditText"
+       android:layout_toLeftOf="@+id/share_intent"
+       android:layout_toStartOf="@+id/share_intent" />
 
-    <Button
-        android:text="Перейти"
-        android:textAllCaps="true"
-        android:onClick="Go2"
+    <ImageButton
+        android:id="@+id/share_intent"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/zapros"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/share_intent"
-        style="@android:style/Widget.DeviceDefault.Button.Borderless" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/zapros"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_insert_link"
+        android:text="@string/go_to" />
 
-    <Button
-        android:text="Копировать"
-        android:textAllCaps="true"
-        android:onClick="Copy2Clipboard"
+    <ImageButton
+        android:text="@string/copy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/share_intent"
         android:layout_toLeftOf="@+id/share_intent"
         android:layout_toStartOf="@+id/share_intent"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         android:id="@+id/copy"
-        style="@android:style/Widget.DeviceDefault.Button.Borderless" />
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_content_copy"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Small" />
 
-    <Button
-        android:text="Очистить"
+    <ImageButton
+        android:text="@string/clear"
         android:textAllCaps="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/zapros"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/clear"
+        android:src="@drawable/ic_clear_all"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frame_container"
+        android:text="@string/history"
+        android:textSize="16sp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/clear"
-        style="@android:style/Widget.DeviceDefault.Button.Borderless"
-        android:onClick="clearText" />
+        android:layout_marginBottom="8dp"
+        />
+
+    <FrameLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/share_intent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frame_container">
+ </FrameLayout>
 </RelativeLayout>

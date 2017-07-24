@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">GikGoogle</string>
+
+    <string name="open_gik_brace">Скопировано: GikGoogle [</string>
+    <string name="close_gik_brace">]</string>
+    <string name="nothing_to_copy">Нечего копировать!</string>
+    <string name="enter_quere_first">Сначала введите запрос!</string>
+    <string name="open_in_browser">Открыть Gik в браузере)</string>
+    <string name="git_url">https://github.com/SnowVolf/GikGoogle/</string>
+    <string name="explore_source">Изучить исходники</string>
+    <string name="clear">Очистить</string>
+    <string name="copy">Копировать</string>
+    <string name="go_to">Перейти</string>
+    <string name="enter_queue">Введите поисковый запрос</string>
+    <string name="github">GitHub</string>
+    <string name="clear_search_history">Очистить историю</string>
+    <string name="url_copied">Url скопирован</string>
+    <string name="history">История</string>
+    <string name="refresh_database">Обновить базу</string>
+    <string name="dialog_db_wait_for_refresh">Обновление базы… Ждите…</string>
+    <string name="about_program">О программе</string>
 </resources>

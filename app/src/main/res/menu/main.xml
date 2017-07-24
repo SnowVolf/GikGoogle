@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item
-    android:id="@+id/git"
-    android:title="GitHub"
-    android:showAsAction="always"/>
+    <item
+        android:id="@+id/git"
+        android:title="@string/github"
+        android:icon="@drawable/ic_action_repository"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/cleardb"
+        android:title="@string/clear_search_history"
+        android:icon="@drawable/ic_action_clear_db"
+        android:orderInCategory="1"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/refreshdb"
+        android:title="@string/refresh_database"
+        android:icon="@drawable/ic_action_refresh_database"
+        android:orderInCategory="2"
+        android:showAsAction="always"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about_program"
+        android:orderInCategory="4"
+        android:showAsAction="ifRoom"/>
+
 </menu>
